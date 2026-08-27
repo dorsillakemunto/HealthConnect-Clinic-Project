@@ -49,7 +49,11 @@ The objective is to formulate a binary classification problem: **Predict whether
 ### Proposed Target Definition 
 
 The target variable is derived directly from the final outcome of the appointment: 
-| Appointment Outcome | Proposed Target | Action / Handling | | :--- | :--- | :--- | | **No-Show** | `1` | Include in target population | | **Attended** | `0` | Include in target population | | **Cancelled** | *Handle separately* | Exclude from initial model population | > 📌 *The target definition still needs to be confirmed against final project requirements and the Data Dictionary before building models.* 
+| Appointment Outcome | Proposed Target | Action / Handling | | :--- | :--- | :--- | 
+| **No-Show** | `1` | Include in target population | 
+| **Attended** | `0` | Include in target population | 
+| **Cancelled** | *Handle separately* | Exclude from initial model population | > 📌 
+
 
 ### Handling Cancellations
 
