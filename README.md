@@ -48,11 +48,16 @@ The objective is to formulate a binary classification problem: **Predict whether
 
 ### Proposed Target Definition 
 
-The target variable is derived directly from the final outcome of the appointment: 
-| Appointment Outcome | Proposed Target | Action / Handling | | :--- | :--- | :--- | 
-| **No-Show** | `1` | Include in target population | 
-| **Attended** | `0` | Include in target population | 
-| **Cancelled** | *Handle separately* | Exclude from initial model population | > 📌 
+The target variable is derived directly from the final outcome of the appointment:
+
+| Appointment Outcome | Proposed Target | Action / Handling |
+| :--- | :--- | :--- |
+| **No-Show** | `1` | Include in target population |
+| **Attended** | `0` | Include in target population |
+| **Cancelled** | *Handle separately* | Exclude from initial model population |
+
+> 📌 **Note:** The model initially focuses on predicting **No-Show vs. Attended** appointments. Cancelled appointments are excluded from the initial model population and handled separately.
+
 
 
 ### Handling Cancellations
@@ -65,7 +70,7 @@ Cancellations **should not** automatically be treated as no-shows. A cancellatio
 
 ### Input Feature Groups 
 * **Historical Attendance (High Priority):** Tracks metrics like `previous_no_shows` or past appointment outcomes.
-* **Constraint:* Must only aggregate data from appointments occurring chronologically before the current appointment date.
+* **Constraint:** Must only aggregate data from appointments occurring chronologically before the current appointment date.
 * **Appointment Timing (High Priority):** Waiting time, booking-to-appointment interval, day of the week, and time of day.
 * **Reminder Information (Conditional):** Reminders sent, type, and timing. Requires confirmation on exactly *when* this log becomes available.
 * **Accessibility:** Physical distance from the patient’s home to the clinic.
@@ -79,16 +84,18 @@ Information that updates only *after* the appointment outcome occurs must be str
 
 
 
-## 🎯 Feature Recommendations Summary 
+## 🎯 Feature Recommendations Summary
 
-| Feature Group | Recommendation | Action | | :--- | :--- | :--- | 
-| **Historical attendance** | 🟢 High priority | Include immediately | 
-| **Appointment timing** | 🟢 High priority | Include immediately | 
-| **Reminder information** | 🟡 Consider | Include after availability timing check | 
-| **Accessibility** | 🟡 Consider | Include if data quality allows | 
-| **Appointment/booking details**| 🟡 Consider | Include as structural features | 
-| **Demographic variables** | 🟠 Review carefully| Screen for fairness and ethical risks | 
-| **Final/post-outcome info** | 🔴 Exclude | Drop entirely to avoid leakage | 
+| Feature Group | Recommendation | Action |
+| :--- | :--- | :--- |
+| **Historical attendance** | 🟢 High priority | Include immediately |
+| **Appointment timing** | 🟢 High priority | Include immediately |
+| **Reminder information** | 🟡 Consider | Include after availability timing check |
+| **Accessibility** | 🟡 Consider | Include if data quality allows |
+| **Appointment/booking details** | 🟡 Consider | Include as structural features |
+| **Demographic variables** | 🟠 Review carefully | Screen for fairness and ethical risks |
+| **Final/post-outcome info** | 🔴 Exclude | Drop entirely to avoid leakage |
+
 
 
 
