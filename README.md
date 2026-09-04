@@ -1,4 +1,4 @@
-# HealthConnect Clinic – Week 5 Data Science
+# HealthConnect Clinic – Week 5 Data Science Internship Project by AnalystLab Africa
 
 ## 📋 Project Overview
 **HealthConnect Clinic** is a fictional healthcare provider seeking to reduce missed appointments and improve patient support. This project focuses on using appointment data to understand factors associated with appointment attendance and no-shows.
