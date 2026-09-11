@@ -1,4 +1,4 @@
-#HealthConnect Week 6 — Model Improvement & Validation Project Overview
+# HealthConnect Week 6 — Model Improvement & Validation Project Overview
 
 HealthConnect Clinic wants to reduce missed appointments and improve appointment attendance. The Week 6 focus is **Model Improvement, Error Analysis, and Validation**.
 
