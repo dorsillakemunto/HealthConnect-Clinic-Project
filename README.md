@@ -26,7 +26,6 @@ A controlled Random Forest refinement was tested by limiting the maximum tree de
 The notebook produces the following deliverables:
 * Candidate model test results
 * Error analysis & segment performance results
-* Cross-validation results
 * Baseline and refinement comparisons
 * Before/after error analysis
 * ROC curves
