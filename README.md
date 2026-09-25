@@ -212,7 +212,6 @@ Important lessons included:
 * Error analysis provides information that aggregate metrics can hide.
 * Threshold selection affects operational behaviour.
 * Feature availability and leakage must be considered carefully.
-* Cross-track collaboration requires actual exchange and use of outputs.
 * A technically strong model still requires appropriate governance and operational validation.
 
 ## Future Improvements 
