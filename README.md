@@ -1,309 +1,182 @@
-HealthConnect Clinic — No-Show Prediction
-Week 8 Final Model, Integration & Presentation
-📋 Project Overview
+# HealthConnect Clinic — No-Show Prediction Week 8 Final Model, Integration & Presentation Project Overview 
 
-HealthConnect Clinic is a fictional healthcare provider seeking to:
+HealthConnect Clinic is a fictional healthcare provider seeking to reduce missed appointments, improve patient attendance, make better use of available appointment capacity, and provide more effective administrative support to patients.
 
-Reduce missed appointments
-
-Improve patient attendance
-
-Make better use of available appointment capacity
-
-Provide more effective administrative support to patients
-
-This project forms part of an Experience Lab multidisciplinary HealthConnect solution addressing the following question:
+This project forms part of an Experience Lab multidisciplinary HealthConnect solution addressing the question:
 
 How can HealthConnect Clinic use data and AI to reduce missed appointments and improve the patient support experience?
 
 The Data Science contribution focuses on developing and validating a machine-learning model that predicts the likelihood of an appointment resulting in a No-Show.
 
-📅 Project Timeline
-Week	Stage	Description
-Week 4	Problem Understanding & Planning	Defined the problem, objectives and modelling approach
-Week 5	Analysis & Initial Implementation	Performed initial analysis and developed the first model
-Week 6	Integration & Validation	Integrated outputs and validated the modelling approach
-Week 7	Testing & Refinement	Tested, evaluated and refined the candidate models
-Week 8	Final Model, Integration & Presentation	Finalised the model, documented integration and prepared presentation materials
+The Week 8 work represents the final stage of the project:
 
-The Week 8 work represents the final stage of the project.
+* Week 4 → Problem Understanding & Planning
+* Week 5 → Analysis & Initial Implementation
+* Week 6 → Integration & Validation
+* Week 7 → Testing & Refinement
+* Week 8 → Final Model, Integration & Presentation
 
-🎯 Data Science Objective
+## Data Science Objective 
 
 The objective of the Data Science track is to provide HealthConnect with a validated predictive model that can be used as an administrative decision-support signal.
 
 The model is intended to help identify appointments that may require additional confirmation or reminder activity.
 
-⚠️ The Model Is Not Intended To
+It is not intended to:
 
-Determine whether a patient will definitely attend
+* determine whether a patient will definitely attend;
+* replace administrative staff judgement;
+* make clinical decisions;
+* determine patient eligibility or treatment;
+* guarantee that an intervention will improve attendance.
 
-Replace administrative staff judgement
-
-Make clinical decisions
-
-Determine patient eligibility or treatment
-
-Guarantee that an intervention will improve attendance
-
-📦 Week 8 Final Deliverables
+## Week 8 Final Deliverables 
 
 The final Data Science package includes:
 
-✅ Final candidate model
+* Final candidate model
+* Baseline model
+* Baseline-versus-final comparison
+* Model evaluation
+* Cross-validation
+* Threshold analysis
+* Error analysis
+* False-positive and false-negative analysis
+* Feature and preprocessing decisions
+* Business interpretation
+* Model limitations and risks
+* Operational-use boundaries
+* ML Engineering handoff requirements
+* Final HealthConnect workflow
+* Presentation materials
+* Lessons learned
+* Future improvement recommendations
 
-✅ Baseline model
-
-✅ Baseline-versus-final comparison
-
-✅ Model evaluation
-
-✅ Threshold analysis
-
-✅ Error analysis
-
-✅ False-positive and false-negative analysis
-
-✅ Feature and preprocessing decisions
-
-✅ Business interpretation
-
-✅ Model limitations and risks
-
-✅ Operational-use boundaries
-
-✅ ML Engineering handoff requirements
-
-✅ Final HealthConnect workflow
-
-✅ Presentation materials
-
-✅ Lessons learned
-
-✅ Future improvement recommendations
-
-🤖 Modelling Approach
+## Modelling Approach 
 
 The project progressed from an initial baseline model to a Random Forest candidate and subsequently through testing and refinement.
 
-Modelling Workflow
-Data Preparation
-       ↓
-Feature Review
-       ↓
-Leakage Screening
-       ↓
-Train/Test Splitting
-       ↓
-Preprocessing
-       ↓
-Candidate Model Development
-       ↓
-Threshold Analysis
-       ↓
-Error Analysis
-       ↓
-Refinement
-       ↓
-Retesting
-       ↓
-Final Model Selection
-       ↓
-Business Interpretation
-       ↓
-Integration Documentation
+The modelling workflow includes:
 
+1. Data preparation
+2. Feature review
+3. Leakage screening
+4. Train/test splitting
+5. Preprocessing
+6. Candidate model development
+7. Threshold analysis
+8. Error analysis
+9. Refinement
+10. Retesting
+11. Final model selection
+12. Business interpretation
+13. Integration documentation
 
-The final model is selected using the documented Week 7 testing evidence, rather than simply selecting a model because it was developed later.
+The final model is selected using the documented Week 7 testing evidence rather than simply selecting a model because it was developed later.
 
-📊 Model Evaluation
+## Model Evaluation 
 
-The final model is evaluated using multiple performance measures:
+The final model is evaluated using:
 
-Evaluation Area	Metric / Method
-Classification Performance	Accuracy
-Positive Prediction Quality	Precision
-Detection Performance	Recall
-Overall Classification Balance	F1 Score
-Ranking Performance	ROC-AUC
-Classification Breakdown	Confusion Matrix
-Error Assessment	False-Positive Analysis
-Error Assessment	False-Negative Analysis
-Model Stability	Cross-Validation
-Generalisation	Training-vs-Test Comparison
+* Accuracy
+* Precision
+* Recall
+* F1 Score
+* ROC-AUC
+* Confusion matrix
+* False-positive analysis
+* False-negative analysis
+* Cross-validation
+* Training-versus-test comparison
 
 Multiple metrics are used because no single metric fully describes the operational usefulness of a No-Show prediction model.
 
-🔍 Error Analysis
+## Error Analysis 
 
-Particular attention is given to the two main types of prediction errors.
+Particular attention is given to:
 
-False Positives
-
-Definition: Appointments predicted as No-Shows that were actually attended.
-
-False positives may result in unnecessary reminder or confirmation activity.
-
-False Negatives
-
-Definition: Appointments that were actually No-Shows but were not identified by the model.
-
-False negatives represent missed opportunities to provide additional appointment support.
-
-Why Error Analysis Matters
+* **False Positives**  
+  Appointments predicted as No-Shows that were actually attended.
+* **False Negatives**  
+  Appointments that were actually No-Shows but were not identified by the model.
 
 Both error types have operational implications and therefore need to be considered when designing any intervention workflow.
 
-💼 Business Interpretation
+## Business Interpretation 
 
 The model can support an administrative workflow such as:
 
-Appointment Data
-       ↓
-Risk Prediction
-       ↓
-Administrative Prioritisation
-       ↓
-Appropriate Reminder / Confirmation Activity
-       ↓
-Attendance Outcome
-       ↓
-Monitoring
-
+> Appointment data → Risk prediction → Administrative prioritisation → Appropriate reminder/confirmation activity → Attendance outcome → Monitoring
 
 The prediction should be treated as a prioritisation signal rather than a certainty.
 
 The effectiveness of the complete solution should ultimately be evaluated using operational outcomes, not predictive metrics alone.
 
-🔗 Cross-Track Integration
+## Cross-Track Integration 
 
 The Data Science component forms part of a broader multidisciplinary HealthConnect solution.
 
-📈 Data Analytics
+Potential integration includes:
 
-Provides validated analytical findings that help:
-
-Contextualise the modelling results
-
-Identify relevant appointment patterns
-
-Support interpretation of model outputs
-
-⚙️ ML Engineering
-
-Uses the documented final model requirements to support:
-
-Reproducible implementation
-
-Deployment
-
-Model monitoring
-
-Technical handoff
-
-🤖 Generative AI
-
-Can support appropriate:
-
-Patient-facing communication workflows
-
-Administrative communication
-
-Appointment-support workflows
-
-📋 Project Management
-
-Coordinates:
-
-Requirements
-
-Deliverables
-
-Dependencies
-
-Risks
-
-Final project readiness
+* **Data Analytics**  
+  Provides validated analytical findings that help contextualise the modelling results and identify relevant appointment patterns.
+* **ML Engineering**  
+  Uses the documented final model requirements to support reproducible implementation, deployment and monitoring.
+* **Generative AI**  
+  Can support appropriate patient-facing or administrative communication workflows around identified appointment-support needs.
+* **Project Management**  
+  Coordinates requirements, deliverables, dependencies, risks and final project readiness.
 
 The Week 8 documentation records the actual outputs exchanged between tracks and distinguishes confirmed evidence from planned integration.
 
-⚠️ Model Limitations and Risks
+## Model Limitations and Risks 
 
 The model has several important limitations:
 
-Predictions are probabilistic rather than certain.
+* Predictions are probabilistic rather than certain.
+* Historical data may not represent future appointment behaviour.
+* Model performance can change when data distributions change.
+* False positives and false negatives remain.
+* Segment-level performance may vary.
+* Predictive performance does not prove that reminders or other interventions will cause attendance to improve.
+* Production use would require monitoring and periodic evaluation.
+* Features must be available before the appointment outcome is known.
+* Any operational deployment should include appropriate governance and human oversight.
 
-Historical data may not represent future appointment behaviour.
-
-Model performance can change when data distributions change.
-
-False positives and false negatives remain.
-
-Segment-level performance may vary.
-
-Predictive performance does not prove that reminders or other interventions will cause attendance to improve.
-
-Production use would require monitoring and periodic evaluation.
-
-Features must be available before the appointment outcome is known.
-
-Any operational deployment should include appropriate governance and human oversight.
-
-✅ What the Model Can Be Used For
+## What the Model Can Be Used For 
 
 The model can support:
 
-Appointment-risk prioritisation
+* Appointment-risk prioritisation
+* Administrative planning
+* Reminder prioritisation
+* Confirmation workflows
+* Capacity-management analysis
+* Monitoring of prediction performance
 
-Administrative planning
-
-Reminder prioritisation
-
-Confirmation workflows
-
-Capacity-management analysis
-
-Monitoring of prediction performance
-
-🚫 What the Model Cannot Be Used For
+## What the Model Cannot Be Used For 
 
 The model should not independently be used to:
 
-Make clinical decisions
+* Make clinical decisions
+* Diagnose patients
+* Determine treatment
+* Penalise patients
+* Treat a predicted No-Show as a confirmed outcome
+* Replace human administrative judgement
+* Claim that an intervention will definitely prevent a missed appointment
 
-Diagnose patients
-
-Determine treatment
-
-Penalise patients
-
-Treat a predicted No-Show as a confirmed outcome
-
-Replace human administrative judgement
-
-Claim that an intervention will definitely prevent a missed appointment
-
-🏥 Final HealthConnect Value
+## Final HealthConnect Value 
 
 The Data Science contribution provides a predictive layer within the wider HealthConnect solution.
 
 The intended value is to help the clinic move from a purely reactive appointment process toward a more data-informed administrative workflow.
 
-The final solution combines:
+The final solution combines analytical insight, predictive modelling, engineering implementation, AI-supported communication and project coordination.
 
-Analytical Insight
-       +
-Predictive Modelling
-       +
-Engineering Implementation
-       +
-AI-Supported Communication
-       +
-Project Coordination
-       ↓
-Integrated HealthConnect Solution
+## Project Structure 
 
-📁 Project Structure
+```text
 HealthConnect/
 │
 ├── notebooks/
@@ -315,80 +188,50 @@ HealthConnect/
 │   └── Week8/
 │
 ├── README.md
-│
-└── presentation/
-    └── HealthConnect_Week8_Data_Science_Presentation
+│   └── presentation/
+└── HealthConnect_Week8_Data_Science_Presentation
+```
 
-🎓 Week 8 Outcome
+## Week 8 Outcome 
 
 The Week 8 Data Science contribution moves the project from a tested predictive model toward a documented, business-oriented and integration-ready component.
 
-The final deliverable demonstrates the following progression:
+The final deliverable demonstrates:
 
-Model
-  ↓
-Evidence
-  ↓
-Interpretation
-  ↓
-Integration
-  ↓
-Business Value
+> Model → Evidence → Interpretation → Integration → Business Value
 
-📚 Lessons Learned
+## Lessons Learned 
 
 The project demonstrated that developing a useful predictive solution involves more than selecting an algorithm.
 
 Important lessons included:
 
-Business context should guide modelling decisions.
+* Business context should guide modelling decisions.
+* Baseline comparison is important when assessing model development.
+* Multiple evaluation metrics are required.
+* Error analysis provides information that aggregate metrics can hide.
+* Threshold selection affects operational behaviour.
+* Feature availability and leakage must be considered carefully.
+* Cross-track collaboration requires actual exchange and use of outputs.
+* A technically strong model still requires appropriate governance and operational validation.
 
-Baseline comparison is important when assessing model development.
-
-Multiple evaluation metrics are required to understand model performance.
-
-Error analysis provides information that aggregate metrics can hide.
-
-Threshold selection affects operational behaviour.
-
-Feature availability and data leakage must be considered carefully.
-
-Cross-track collaboration requires actual exchange and use of outputs.
-
-A technically strong model still requires appropriate governance and operational validation.
-
-🚀 Future Improvements
+## Future Improvements 
 
 Future iterations could investigate:
 
-Larger and more recent datasets
+* Larger and more recent datasets
+* Additional validated appointment features
+* Segment-level monitoring
+* Probability calibration
+* Alternative modelling approaches
+* Automated monitoring for data and model drift
+* Controlled evaluation of reminder interventions
+* Integration with operational appointment systems
+* Continuous model performance monitoring
+* Periodic model review and retraining
 
-Additional validated appointment features
-
-Segment-level monitoring
-
-Probability calibration
-
-Alternative modelling approaches
-
-Automated monitoring for data and model drift
-
-Controlled evaluation of reminder interventions
-
-Integration with operational appointment systems
-
-Continuous model performance monitoring
-
-Periodic model review and retraining
-
-📝 Final Statement
+## Final Statement 
 
 The HealthConnect Data Science contribution demonstrates how predictive analytics can form one component of a broader multidisciplinary healthcare-support solution.
 
 The model is intended to support better administrative prioritisation while keeping human judgement at the centre of operational decisions.
-
-The overall project demonstrates the progression from:
-
-Data → Modelling → Evidence → Interpretation → Integration → Business Value
-
-The final Data Science component therefore provides a foundation for a more data-informed, monitored and human-centred appointment-support workflow.
